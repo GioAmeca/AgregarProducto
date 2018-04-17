@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Agregar Producto</string>
+    <string name="TxtCategoria">Categoria:</string>
+    <string name="EdtxtProducto">Nombre de Producto</string>
+    <string name="TxtSelecCategoria">Selecione Categoria:</string>
+    <string name="TxtIngresa">Ingresa Producto:</string>
+    <string name="BtnGuardar">Guardar</string>
+</resources>
