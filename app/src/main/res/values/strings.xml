@@ -5,4 +5,6 @@
     <string name="TxtSelecCategoria">Selecione Categoria:</string>
     <string name="TxtIngresa">Ingresa Producto:</string>
     <string name="BtnGuardar">Guardar</string>
+    <string name="menu_option_1">Modificar</string>
+    <string name="menu_option_2">Eliminar</string>
 </resources>
