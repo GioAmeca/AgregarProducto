@@ -53,18 +53,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==123){
-            productos.add(data.getStringExtra("name"));
-            categoria.add(data.getStringExtra("categori"));
-            llenartabla();
-            Toast.makeText(MainActivity.this,"se Agrego: "+ data.getStringExtra("name"),Toast.LENGTH_LONG).show();
+        if(requestCode==RESULT_OK) {
+            if (requestCode == 123) {
+                productos.add(data.getStringExtra("name"));
+                categoria.add(data.getStringExtra("categori"));
+                llenartabla();
+                Toast.makeText(MainActivity.this, "se Agrego: " + data.getStringExtra("name"), Toast.LENGTH_LONG).show();
+            }
+            if (requestCode == 555) {
+                productos.set(pos, data.getStringExtra("name"));
+                categoria.set(pos, data.getStringExtra("categori"));
+                llenartabla();
+                Toast.makeText(this, "Se Modifico", Toast.LENGTH_LONG).show();
+            }
         }
-        if (requestCode==555){
-            productos.set(pos,data.getStringExtra("name"));
-            categoria.set(pos,data.getStringExtra("categori"));
-            llenartabla();
-            Toast.makeText(this,"Se Modifico",Toast.LENGTH_LONG).show();
-        }
+
+
 
     }
 
